@@ -17,7 +17,7 @@ def select():
 
 def change():
     pydirectinput.keyDown(key)
-    sleep(    randint(13, 16)/10    )
+    sleep(    randint(135, 160)/100    )
     pydirectinput.keyUp(key)
     sleep(1)
 
