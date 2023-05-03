@@ -1,11 +1,11 @@
 import kbModule as kb
 from time import sleep
 
+
 ### There are only 2 types of instruction
 ### 1: Select digit (You can only move to left and from the last digit to the first digit)
 ### 2: Change digit (You can only add 1 to the digit, if the digit is 9, it will be 0)
 ### I need to go through every possible combination of the digits
-
 
 
 class CodeLock:
@@ -21,6 +21,8 @@ class CodeLock:
         elif digits == 4:
             self.digits = [0, 0, 0, 0]
 
+
+
     def changeDigit(self):
         digitToChange = self.digits[self.selectionIndex]
         if digitToChange == 9:
@@ -33,6 +35,8 @@ class CodeLock:
         kb.change()
         self.log()
 
+
+
     def selectDigit(self):
         if self.selectionIndex == self.type - 1:
             self.selectionIndex = 0
@@ -42,8 +46,10 @@ class CodeLock:
         kb.select()
         self.log()
 
-    def unlock4(self):
 
+
+    def unlock4(self):
+        global pause
         for t in range(0, 10):
             for h in range(0, 10-1):
                 self.selectDigit()
@@ -135,6 +141,8 @@ class CodeLock:
         print("[ ] Code type: " + str(self.type) + " digits")
         print("[ ] Lockpicking...")
 
+
+
     def log(self):
 
         for index, digit in enumerate(self.digits):
@@ -145,10 +153,9 @@ class CodeLock:
 
         print("\r", end="")
 
+
+
 if __name__ == "__main__":
-
-    # Make countdown
-
 
     codeLock = CodeLock(4)
     codeLock.bruteForce()
