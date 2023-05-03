@@ -32,8 +32,9 @@ class CodeLock:
 
         self.digits[self.selectionIndex] = digitToChange
 
-        kb.change()
         self.log()
+        kb.change()
+
 
 
 
@@ -43,8 +44,8 @@ class CodeLock:
         else:
             self.selectionIndex = self.selectionIndex + 1
 
-        kb.select()
         self.log()
+        kb.select()
 
 
 
@@ -56,41 +57,27 @@ class CodeLock:
                 self.selectDigit()
                 self.selectDigit()
 
-
                 for d in range(0, 10):
                     self.changeDigit()
-
                     self.counter += 1
-
 
                 for t in range(0, 10):
                     self.selectDigit()
                     self.selectDigit()
                     self.selectDigit()
-
                     self.changeDigit()
-
                     self. selectDigit()
-
                     for d in range(0, 10):
                         self.changeDigit()
-
                         self.counter += 1
-
-                # 1 - 99
-
                 self.changeDigit()
-
                 self.selectDigit()
                 self.selectDigit()
                 self.changeDigit()
                 self.selectDigit()
-
                 self.changeDigit()
-
                 self.selectDigit()
                 self.selectDigit()
-
                 self.counter += 1
 
             self.changeDigit()
@@ -108,7 +95,7 @@ class CodeLock:
     def bruteForce(self):
 
         for i in range(5, 0, -1):
-            print("\r[Starting in ", i, "]", end="", sep="")
+            print("\r[i]Starting in ", i, end="", sep="")
             sleep(1)
 
         print("\r                      ")
@@ -118,7 +105,6 @@ class CodeLock:
             pass
         elif self.type == 4:
             self.unlock4()
-
             print("Total combinations: " + str(self.counter))
 
 
@@ -126,17 +112,12 @@ class CodeLock:
     def guiHeader(self):
         # Cli:
 
-        ### DayZ Lockpicker ###
-        ### Code type: {X} digits ###
-        ### Lockpicking... ###
-        ###  0  [0]  0   0 
+        # [] DayZ Lockpicker ###
+        # [] Code type: {X} digits ###
+        # [] Lockpicking... ###
+        #  0  [0]  0   0
 
-
-
-
-        # move to the start of the line
         print('\r', end='')
-        # print the bar
         print("[ ] DayZ Lockpicker")
         print("[ ] Code type: " + str(self.type) + " digits")
         print("[ ] Lockpicking...")
