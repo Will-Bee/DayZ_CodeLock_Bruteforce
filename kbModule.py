@@ -22,8 +22,6 @@ def change():
     sleep(1)
 
 
-# TODO Implement into main code
-
 
 if __name__ == "__main__":
     sleep(5)

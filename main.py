@@ -95,7 +95,7 @@ class CodeLock:
     def bruteForce(self):
 
         for i in range(5, 0, -1):
-            print("\r[i]Starting in ", i, end="", sep="")
+            print("\r[i] Starting in ", i, end="", sep="")
             sleep(1)
 
         print("\r                      ")
@@ -105,7 +105,7 @@ class CodeLock:
             pass
         elif self.type == 4:
             self.unlock4()
-            print("Total combinations: " + str(self.counter))
+            print("[i] Total combinations: " + str(self.counter))
 
 
 
