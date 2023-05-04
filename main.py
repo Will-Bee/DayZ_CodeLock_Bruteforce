@@ -47,9 +47,21 @@ class CodeLock:
         self.log()
         kb.select()
 
+    def scrollThru(self):
+        # TODO: Make this function scroll through the digits
+        # ! It needs to be timed correctly, so it scrolls through all digits only once
+        # ! It needs to update the digits list as well. Function will press button, update between sleeps and than release and update again
+        pass
+
 
 
     def unlock4(self):
+        """
+            Do not mess with this function,
+            it works perfectly so don't touch it.
+            I spent 5 hours doing this shit man.
+            Just trust the proccess
+        """
         global pause
         for t in range(0, 10):
             for h in range(0, 10-1):
@@ -112,15 +124,15 @@ class CodeLock:
     def guiHeader(self):
         # Cli:
 
-        # [] DayZ Lockpicker ###
-        # [] Code type: {X} digits ###
-        # [] Lockpicking... ###
-        #  0  [0]  0   0
+        #| [ ] DayZ Lockpicker ###
+        #| [ ] Code type: {X} digits ###
+        #| [ ] Lockpicking... ###
+        #|  0  [0]  0   0
 
         print('\r', end='')
         print("[ ] DayZ Lockpicker")
         print("[ ] Code type: " + str(self.type) + " digits")
-        print("[ ] Lockpicking...")
+        print("[ ] Lockpicking...\n")
 
 
 
